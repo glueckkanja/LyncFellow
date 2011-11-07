@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyncFellow", "LyncFellow\LyncFellow.csproj", "{86FCC377-4098-4D83-B16A-80377BCFCA94}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Global", "Global", "{14208621-A40B-4596-B50C-6DEBE8695FD0}"
+	ProjectSection(SolutionItems) = preProject
+		Global\LyncFellow.ico = Global\LyncFellow.ico
+		Global\LyncFellowInfo.ico = Global\LyncFellowInfo.ico
+		Global\LyncFellowSettings.png = Global\LyncFellowSettings.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SetupNsis", "SetupNsis", "{B08590B2-5290-4C8D-880F-247C5A98057D}"
+	ProjectSection(SolutionItems) = preProject
+		SetupNsis\BuildSetup.ps1 = SetupNsis\BuildSetup.ps1
+		SetupNsis\LyncFellow.nsi = SetupNsis\LyncFellow.nsi
+		SetupNsis\TestSetup.cmd = SetupNsis\TestSetup.cmd
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x86 = Debug|x86
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Debug|Win32.ActiveCfg = Debug|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Debug|x86.ActiveCfg = Debug|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Debug|x86.Build.0 = Debug|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Release|Mixed Platforms.Build.0 = Release|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Release|Win32.ActiveCfg = Release|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Release|x86.ActiveCfg = Release|x86
+		{86FCC377-4098-4D83-B16A-80377BCFCA94}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

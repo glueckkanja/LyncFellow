@@ -1,0 +1,11 @@
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+_ReSharper.*
+*.ReSharper
+*~
+*.tmp
+
+/SetupMsi/Debug
+/SetupNsis/LyncFellowSetup*.zip
