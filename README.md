@@ -9,7 +9,7 @@ LyncFellow is an open source project by Glueck & Kanja. LyncFellow makes i-Buddy
 
 ## Acknowledgements
 
-Part of the code is based on [https://lyncbuddy.codeplex.com/](https://lyncbuddy.codeplex.com/) by Jon Doe.
+Part of the code is based on [https://lyncbuddy.codeplex.com/](https://lyncbuddy.codeplex.com/) by Tommy Clarke.
 
 ## License
 
