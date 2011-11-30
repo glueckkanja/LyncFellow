@@ -16,8 +16,6 @@ namespace LyncFellow
         {
             InitializeComponent();
 
-            LyncFellowLabel.Text += " " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
-
             switch (Properties.Settings.Default.RedOnDndCallBusy)
             {
                 case ContactAvailability.DoNotDisturb:
@@ -60,6 +58,11 @@ namespace LyncFellow
             }
             Properties.Settings.Default.Save();
             this.Close();
+        }
+
+        private void SettingsForm_Load(object sender, EventArgs e)
+        {
+            Text += @" v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }
     }
 }
