@@ -6,6 +6,7 @@ _ReSharper.*
 *.ReSharper
 *~
 *.tmp
+.DS_Store
 
 /SetupMsi/Debug
 /SetupNsis/LyncFellowSetup*.zip
