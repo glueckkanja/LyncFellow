@@ -1,0 +1,11 @@
+
+/* CONDITIONAL STYLES FOR IE7 */
+
+
+#feature3 h2{
+    padding-bottom:10px;
+}
+
+#feature3 .featureDetails p{
+    margin-top:-10px;
+}

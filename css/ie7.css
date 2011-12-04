@@ -1,0 +1,65 @@
+
+/* CONDITIONAL STYLES FOR IE7 */
+
+
+#action .actionBtnTop{
+        position:relative;
+        left:0;
+}
+
+#footer #newsletter{
+        
+   padding-bottom:0 !important;
+   margin-bottom:0;
+}
+
+#footer #newsletter #socialTitle{
+    display:inline;
+    float:left;
+    margin-bottom:0;
+    padding-bottom:0;
+    padding-top:20px;
+    
+}
+
+#newsletter #socialMedia{
+    float:right;
+    display:inline;
+    padding-top:20px;
+}
+
+#footer #newsletterSignUp{
+        margin-bottom:25px;
+}
+
+#newsletterSignUp input[type=text]{
+    margin-top:0;
+}
+
+#contact{
+    overflow:hidden;
+}
+
+#contact label{
+    display:inline-block;
+    
+}
+
+#contact input[type=text] {
+    position:relative;
+    overflow:hidden;
+    margin-top:-20px;
+    display:inline-block;
+}
+
+
+#contact textarea{
+    height:195px;
+    margin-top:-20px;
+}
+
+#contact input[type=submit]{
+    width:60px;
+    border:none;
+    height:23px;
+}
