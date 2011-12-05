@@ -24,12 +24,6 @@ namespace LyncFellow
             public string DevicePath;
         }
 
-        //public struct HIDBufferSizes
-        //{
-        //    public short InputReportLength;
-        //    public short OutputReportLength;
-        //}
-
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         protected struct HidCaps
         {
@@ -123,28 +117,5 @@ namespace LyncFellow
             return list.ToArray();
         }
 
-        //public static HIDBufferSizes GetBufferSizes(int hBuddy)
-        //{
-        //    IntPtr ptr;
-        //    HIDBufferSizes buffertsizes = new HIDBufferSizes();
-        //    buffertsizes.InputReportLength = buffertsizes.OutputReportLength = 0;
-
-        //    if (HidD_GetPreparsedData(hBuddy, out ptr))
-        //    {
-        //        try
-        //        {
-        //            HidCaps caps;
-        //            HidP_GetCaps(ptr, out caps);
-        //            buffertsizes.InputReportLength = caps.InputReportByteLength;
-        //            buffertsizes.OutputReportLength = caps.OutputReportByteLength;
-
-        //        }
-        //        finally
-        //        {
-        //            HidD_FreePreparsedData(ref ptr);
-        //        }
-        //    }
-        //    return buffertsizes;
-        //}
     }
 }

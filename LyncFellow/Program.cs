@@ -5,8 +5,6 @@ using System.Threading;
 using Microsoft.Lync.Model;
 using Microsoft.Lync.Model.Conversation;
 using System.Diagnostics;
-//using System.Reflection;
-//using System.Runtime.InteropServices;
 
 namespace LyncFellow
 {
@@ -43,9 +41,6 @@ namespace LyncFellow
         System.Timers.Timer HousekeepingTimer;
         DateTime _lyncEventsUpdated;
 
-        //[DllImport("user32.dll", SetLastError = true)]
-        //public static extern bool SetWindowText(IntPtr hwnd, String lpString);
-        
         public ApplicationContext()
         {
             if (Properties.Settings.Default.CallUpgrade)
@@ -63,11 +58,6 @@ namespace LyncFellow
             };
             _notifyIcon.ContextMenuStrip.Items.Add(new ToolStripMenuItem("Settings", null, new EventHandler(MenuSettingsItem_Click)));
             _notifyIcon.ContextMenuStrip.Items.Add(new ToolStripMenuItem("Exit", null, new EventHandler(MenuExitItem_Click)));
-
-            //FieldInfo fieldInfo = _notifyIcon.GetType().GetField("window", BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance);
-            //NativeWindow nativeWindow = (NativeWindow)fieldInfo.GetValue(_notifyIcon);
-            //if (nativeWindow.Handle != IntPtr.Zero)
-            //    SetWindowText(nativeWindow.Handle, "Amazing!");
 
             _buddies = new Buddies();
 

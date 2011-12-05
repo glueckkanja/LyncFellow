@@ -16,6 +16,9 @@ namespace LyncFellow
         {
             InitializeComponent();
 
+            Icon = Properties.Resources.LyncFellow;
+            Text += string.Format(" (Version {0})", System.Reflection.Assembly.GetExecutingAssembly().GetName().Version);
+
             switch (Properties.Settings.Default.RedOnDndCallBusy)
             {
                 case ContactAvailability.DoNotDisturb:
@@ -38,7 +41,7 @@ namespace LyncFellow
 
         private void MyOwnWebsiteLabel_Click(object sender, EventArgs e)
         {
-            Process.Start("http://lyncfellow.github.com");
+            Process.Start("http://www.glueckkanja.com/lyncfellow");
         }
 
         private void CloseButtton_Click(object sender, EventArgs e)
@@ -58,11 +61,6 @@ namespace LyncFellow
             }
             Properties.Settings.Default.Save();
             this.Close();
-        }
-
-        private void SettingsForm_Load(object sender, EventArgs e)
-        {
-            Text += @" v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
         }
     }
 }

@@ -105,8 +105,6 @@ namespace LyncFellow
 
         private void Worker()
         {
-            //int loopCounter = 0;
-
             while (IsAlive && !_shutdown)
             {
                 bool updateState = false;
@@ -166,13 +164,6 @@ namespace LyncFellow
                     }
                     updateState = true;
                 }
-
-                //loopCounter++;
-                //if (loopCounter > (3000 / _threadWaitTime))
-                //{
-                //    loopCounter = 0;
-                //    updateState = true;
-                //}
 
                 if (updateState) {
                     UpdateState();
