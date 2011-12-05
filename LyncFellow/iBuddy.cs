@@ -64,10 +64,10 @@ namespace LyncFellow
                 return false;
             }
 
+            IsAlive = true;
             _workerThread = new Thread(Worker);
             _workerThread.Start();
 
-            IsAlive = true;
             return true;
         }
 

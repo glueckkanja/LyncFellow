@@ -29,6 +29,7 @@ RequestExecutionLevel user
 InstallDir "$LOCALAPPDATA\${APPNAMESHORT}"
 
 Section
+	Call CheckIsDotNetInstalled
 	Call CheckIsRunning
 	SetOutPath "$INSTDIR"
 	File "..\LyncFellow\bin\Release\${APPNAMESHORT}.exe"
@@ -57,13 +58,22 @@ Section "uninstall"
 	RMDir /r /REBOOTOK "$INSTDIR"
 SectionEnd
 
+
+Function CheckIsDotNetInstalled
+	ReadRegDWORD $R0 HKLM "SOFTWARE\Microsoft\NET Framework Setup\NDP\v2.0.50727" Install
+	IntCmp $R0 1 dotNetInstalled
+	    MessageBox MB_OK|MB_ICONEXCLAMATION "Microsoft .NET Framework v2.0, v3.0 or v3.5 is required for this application.$\r$\n$\r$\nPlease download and install it before installing this application." /SD IDOK
+	    Abort
+	dotNetInstalled:
+FunctionEnd
+
 !macro SharedInstallUninstallFunctions un
 
 Function ${un}CheckIsRunning
 	System::Call 'kernel32::OpenMutex(i 0x100000, b 0, t "LyncFellowApplication") i .R0'
 	IntCmp $R0 0 notRunning
 	    System::Call 'kernel32::CloseHandle(i $R0)'
-	    MessageBox MB_OK|MB_ICONEXCLAMATION "${APPNAME} is running. Please close it first." /SD IDOK
+	    MessageBox MB_OK|MB_ICONEXCLAMATION "${APPNAME} is running.$\r$\n$\r$\nPlease close it before installing or uninstalling." /SD IDOK
 	    Abort
 	notRunning:
 FunctionEnd
