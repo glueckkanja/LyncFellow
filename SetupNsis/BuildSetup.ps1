@@ -6,7 +6,7 @@ Set-Content ".\LyncFellowVersion.nsi"
 
 Remove-Item ".\LyncFellowSetup*"
 & "C:\Program Files (x86)\NSIS\makensis.exe" "LyncFellowVersion.nsi"
-& "C:\Program Files\7-Zip\7z.exe" "a" ("LyncFellowSetup " + $AppVersion + ".zip") ("LyncFellowSetup " + $AppVersion + ".exe")
+& "C:\Program Files\7-Zip\7z.exe" "a" "LyncFellowSetup $AppVersion.zip" "LyncFellowSetup.exe"
 Remove-Item ".\LyncFellowVersion.nsi"
 
 Write-Host "Press any key to continue ..."

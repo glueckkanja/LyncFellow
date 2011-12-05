@@ -234,9 +234,9 @@
             this.MyOwnWebsiteLabel.ForeColor = System.Drawing.Color.SteelBlue;
             this.MyOwnWebsiteLabel.Location = new System.Drawing.Point(29, 338);
             this.MyOwnWebsiteLabel.Name = "MyOwnWebsiteLabel";
-            this.MyOwnWebsiteLabel.Size = new System.Drawing.Size(383, 23);
+            this.MyOwnWebsiteLabel.Size = new System.Drawing.Size(428, 23);
             this.MyOwnWebsiteLabel.TabIndex = 41;
-            this.MyOwnWebsiteLabel.Text = "My very own website is at lyncfellow.github.com";
+            this.MyOwnWebsiteLabel.Text = "My very own website is at glueckkanja.com/lyncfellow";
             this.MyOwnWebsiteLabel.Click += new System.EventHandler(this.MyOwnWebsiteLabel_Click);
             // 
             // label11

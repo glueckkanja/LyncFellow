@@ -41,7 +41,7 @@ namespace LyncFellow
 
         private void MyOwnWebsiteLabel_Click(object sender, EventArgs e)
         {
-            Process.Start("http://www.glueckkanja.com/lyncfellow");
+            Process.Start("http://glueckkanja.com/lyncfellow");
         }
 
         private void CloseButtton_Click(object sender, EventArgs e)

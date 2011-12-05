@@ -6,6 +6,9 @@
 !define APPVERSION "0.8.1.5"
 !define UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${APPNAMESHORT}"
 
+!define MUI_ICON "..\Global\LyncFellow.ico"
+!define MUI_WELCOMEFINISHPAGE_BITMAP "..\Global\LyncFellowInstaller.bmp"
+
 !define MUI_ABORTWARNING
 !define MUI_FINISHPAGE_NOAUTOCLOSE
 !define MUI_UNABORTWARNING
@@ -19,8 +22,9 @@
 !insertmacro MUI_UNPAGE_INSTFILES
 !insertmacro MUI_LANGUAGE "English"
 
-Name "${APPNAME} ${APPVERSION}"
-OutFile "${APPNAMESHORT}Setup ${APPVERSION}.exe"
+Name "${APPNAME}"
+Caption "${APPNAME} Setup (Version ${APPVERSION})"
+OutFile "${APPNAMESHORT}Setup.exe"
 RequestExecutionLevel user
 InstallDir "$LOCALAPPDATA\${APPNAMESHORT}"
 
