@@ -232,7 +232,7 @@ namespace LyncFellow
 
             bool RedOnBusy = Properties.Settings.Default.RedOnDndCallBusy == ContactAvailability.Busy;
             bool RedOnCall = RedOnBusy || Properties.Settings.Default.RedOnDndCallBusy == ContactAvailability.None;
-            bool InACall = Activity == "on-the-phone";
+            bool InACall = Activity == "on-the-phone" || Activity == "in-a-conference";
             bool Dnd = Availability == ContactAvailability.DoNotDisturb;
             bool Busy = Availability == ContactAvailability.Busy || Availability == ContactAvailability.BusyIdle;
             bool Free = Availability == ContactAvailability.Free || Availability == ContactAvailability.FreeIdle;
@@ -269,7 +269,12 @@ namespace LyncFellow
             else { _settingsForm.Activate(); }
         }
 
-        void settingsForm_Closed(object sender, EventArgs e)     { _settingsForm = null; }
+        void settingsForm_Closed(object sender, EventArgs e)
+        {   
+            _settingsForm = null;
+
+            UpdateBuddiesColorBySelfAvailability();
+        }
 
         private void MenuExitItem_Click(object sender, EventArgs e)
         {
