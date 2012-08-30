@@ -38,7 +38,7 @@ namespace LyncFellow
 
         Buddies _buddies;
         LyncClient _lyncClient;
-        System.Timers.Timer HousekeepingTimer;
+        System.Windows.Forms.Timer _housekeepingTimer;
         DateTime _lyncEventsUpdated;
 
         public ApplicationContext()
@@ -61,18 +61,16 @@ namespace LyncFellow
 
             _buddies = new Buddies();
 
-            HousekeepingTimer = new System.Timers.Timer();
-            HousekeepingTimer.Interval = 5000;
-            HousekeepingTimer.Elapsed += new System.Timers.ElapsedEventHandler(HousekeepingTimer_Elapsed);
-            HousekeepingTimer.Start();
-
-            HousekeepingTimer_Elapsed(null, null);
+            _housekeepingTimer = new System.Windows.Forms.Timer();
+            _housekeepingTimer.Interval = 5000;
+            _housekeepingTimer.Tick += HousekeepingTimer_Tick;
+            HousekeepingTimer_Tick(null, null);     // tick anyway enables timer when finished
 
         }
 
-        private void HousekeepingTimer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        private void HousekeepingTimer_Tick(object sender, EventArgs e)
         {
-            HousekeepingTimer.Enabled = false;
+            _housekeepingTimer.Enabled = false;
 
             _buddies.RefreshList();
 
@@ -135,7 +133,7 @@ namespace LyncFellow
                 }
             }
 
-            HousekeepingTimer.Enabled = true;
+            _housekeepingTimer.Enabled = true;
         }
 
         private bool IsLyncConnectionValid()
