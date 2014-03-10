@@ -7,7 +7,7 @@ namespace LyncFellow
     class Buddies
     {
         enum VendorID { TenxTechnology = 0x1130 }
-        enum TenxTechDeviceID { iBuddy1 = 0x0001, iBuddy2 = 0x0002 }
+        enum TenxTechDeviceID { iBuddy1 = 0x0001, iBuddy2 = 0x0002, iBuddy3 = 0x0003, iBuddy4 = 0x0004, iBuddy5 = 0x0005, iBuddy6 = 0x0006 }
 
         Dictionary<string, iBuddy> _buddies = new Dictionary<string,iBuddy>();
         public int LastWin32Error = 0;
@@ -37,6 +37,10 @@ namespace LyncFellow
             List<string> devicePaths = new List<string>();
             devicePaths.AddRange(HIDDevices.Find((int)VendorID.TenxTechnology, (int)TenxTechDeviceID.iBuddy1));
             devicePaths.AddRange(HIDDevices.Find((int)VendorID.TenxTechnology, (int)TenxTechDeviceID.iBuddy2));
+            devicePaths.AddRange(HIDDevices.Find((int)VendorID.TenxTechnology, (int)TenxTechDeviceID.iBuddy3));
+            devicePaths.AddRange(HIDDevices.Find((int)VendorID.TenxTechnology, (int)TenxTechDeviceID.iBuddy4));
+            devicePaths.AddRange(HIDDevices.Find((int)VendorID.TenxTechnology, (int)TenxTechDeviceID.iBuddy5));
+            devicePaths.AddRange(HIDDevices.Find((int)VendorID.TenxTechnology, (int)TenxTechDeviceID.iBuddy6));
             foreach(var devicePath in devicePaths)
             {
                 if (!_buddies.ContainsKey(devicePath))
